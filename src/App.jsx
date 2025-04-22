@@ -1,4 +1,5 @@
 import Card from './components/Card'
+import Counter from './components/Counter'
 import './App.css'
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
       </ul>
 
       <Card title='Card 1' description='Esta es una descripción'/>
+
+      <Counter />
     </section>
   )
 }
