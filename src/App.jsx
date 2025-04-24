@@ -1,5 +1,6 @@
 import Card from './components/Card'
 import Counter from './components/Counter'
+import ToggleButton from './components/ToggleButton'
 import './App.css'
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
       <Card title='Card 1' description='Esta es una descripción'/>
 
       <Counter />
+
+      <ToggleButton /> 
     </section>
   )
 }
