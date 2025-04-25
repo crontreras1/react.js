@@ -3,6 +3,7 @@ import Counter from './components/Counter'
 import ToggleButton from './components/ToggleButton'
 import NameForm from './components/NameForm'
 import CounterWithEffect from './components/CounterWithEffect'
+import StaticComponent from './components/StaticComponent/StaticComponent'
 import './App.css'
 
 function App() {
@@ -29,6 +30,8 @@ function App() {
       <NameForm />
 
       <CounterWithEffect />
+
+      <StaticComponent />
     </section>
   )
 }
