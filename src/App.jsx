@@ -5,6 +5,7 @@ import NameForm from './components/NameForm'
 import CounterWithEffect from './components/CounterWithEffect'
 import StaticComponent from './components/StaticComponent/StaticComponent'
 import './App.css'
+import UsersList from './components/UsersList/UsersList'
 
 function App() {
   const list = ['React', 'Vite', 'JavaScript', 'Tailwind']
@@ -32,6 +33,8 @@ function App() {
       <CounterWithEffect />
 
       <StaticComponent />
+
+      <UsersList />
     </section>
   )
 }
