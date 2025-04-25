@@ -4,8 +4,9 @@ import ToggleButton from './components/ToggleButton'
 import NameForm from './components/NameForm'
 import CounterWithEffect from './components/CounterWithEffect'
 import StaticComponent from './components/StaticComponent/StaticComponent'
-import './App.css'
 import UsersList from './components/UsersList/UsersList'
+import UsersListWithLoading from './components/UsersListWithloading/UsersListWithLoading'
+import './App.css'
 
 function App() {
   const list = ['React', 'Vite', 'JavaScript', 'Tailwind']
@@ -35,6 +36,8 @@ function App() {
       <StaticComponent />
 
       <UsersList />
+
+      <UsersListWithLoading /> 
     </section>
   )
 }
