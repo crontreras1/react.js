@@ -6,6 +6,7 @@ import CounterWithEffect from './components/CounterWithEffect'
 import StaticComponent from './components/StaticComponent/StaticComponent'
 import UsersList from './components/UsersList/UsersList'
 import UsersListWithLoading from './components/UsersListWithloading/UsersListWithLoading'
+import SearchPost from './components/SearchPost/SearchPost'
 import './App.css'
 
 function App() {
@@ -38,6 +39,8 @@ function App() {
       <UsersList />
 
       <UsersListWithLoading /> 
+
+      <SearchPost /> 
     </section>
   )
 }
