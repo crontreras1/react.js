@@ -10,6 +10,7 @@ import UsersListWithLoading from './components/UsersListWithloading/UsersListWit
 import SearchPost from './components/SearchPost/SearchPost'
 import CounterWithReducer from './components/CounterWithReducer/CounterWithReducer'
 import CounterWithCustomHook from './components/CounterWithCustomHook/CounterWithCustomHook'
+import CounterWithReactMemo from './components/CounterWithReactMemo/CounterWithReactMemo'
 import './App.css'
 
 const ThemeContext = createContext()
@@ -73,6 +74,8 @@ function App() {
         <ThemeButton />
 
         <CounterWithCustomHook /> 
+
+        < CounterWithReactMemo />
       </section>
     </ThemeProvider>
   )
