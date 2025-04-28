@@ -1,3 +1,4 @@
+import { createContext, useContext, useState } from 'react'
 import Card from './components/Card'
 import Counter from './components/Counter'
 import ToggleButton from './components/ToggleButton'
@@ -10,41 +11,67 @@ import SearchPost from './components/SearchPost/SearchPost'
 import CounterWithReducer from './components/CounterWithReducer/CounterWithReducer'
 import './App.css'
 
+const ThemeContext = createContext()
+
+function ThemeProvider ({ children }) {
+  const [theme, setTheme] = useState('light')
+
+  const toggleTheme = () => {
+    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light')
+  }
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      { children }
+    </ThemeContext.Provider>
+  )
+}
+
+function ThemeButton () {
+  const { theme, toggleTheme } = useContext(ThemeContext)
+
+  return <button onClick={ toggleTheme } style={{ backgroundColor: theme === 'light' ? '#fff' : '#333' }}>Cambiar tema</button>
+}
+
 function App() {
   const list = ['React', 'Vite', 'JavaScript', 'Tailwind']
 
   return (
-    <section>
-      <ul>
-        {
-          list.map((item, index) => (
-            <li key={index}>
-              { item }
-            </li>
-          ))
-        }
-      </ul>
+    <ThemeProvider>
+      <section>
+        <ul>
+          {
+            list.map((item, index) => (
+              <li key={index}>
+                { item }
+              </li>
+            ))
+          }
+        </ul>
 
-      <Card title='Card 1' description='Esta es una descripción'/>
+        <Card title='Card 1' description='Esta es una descripción'/>
 
-      <Counter />
+        <Counter />
 
-      <ToggleButton /> 
+        <ToggleButton /> 
 
-      <NameForm />
+        <NameForm />
 
-      <CounterWithEffect />
+        <CounterWithEffect />
 
-      <StaticComponent />
+        <StaticComponent />
 
-      <UsersList />
+        <UsersList />
 
-      <UsersListWithLoading /> 
+        <UsersListWithLoading /> 
 
-      <SearchPost /> 
+        <SearchPost /> 
 
-      <CounterWithReducer /> 
-    </section>
+        <CounterWithReducer /> 
+
+        <ThemeButton />
+      </section>
+    </ThemeProvider>
   )
 }
 
