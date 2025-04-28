@@ -7,6 +7,7 @@ import StaticComponent from './components/StaticComponent/StaticComponent'
 import UsersList from './components/UsersList/UsersList'
 import UsersListWithLoading from './components/UsersListWithloading/UsersListWithLoading'
 import SearchPost from './components/SearchPost/SearchPost'
+import CounterWithReducer from './components/CounterWithReducer/CounterWithReducer'
 import './App.css'
 
 function App() {
@@ -41,6 +42,8 @@ function App() {
       <UsersListWithLoading /> 
 
       <SearchPost /> 
+
+      <CounterWithReducer /> 
     </section>
   )
 }
