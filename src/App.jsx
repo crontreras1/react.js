@@ -9,6 +9,7 @@ import UsersList from './components/UsersList/UsersList'
 import UsersListWithLoading from './components/UsersListWithloading/UsersListWithLoading'
 import SearchPost from './components/SearchPost/SearchPost'
 import CounterWithReducer from './components/CounterWithReducer/CounterWithReducer'
+import CounterWithCustomHook from './components/CounterWithCustomHook/CounterWithCustomHook'
 import './App.css'
 
 const ThemeContext = createContext()
@@ -70,6 +71,8 @@ function App() {
         <CounterWithReducer /> 
 
         <ThemeButton />
+
+        <CounterWithCustomHook /> 
       </section>
     </ThemeProvider>
   )
